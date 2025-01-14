@@ -16,7 +16,7 @@
 `source .venv/bin/activate`
 > Activa el entorno virtual en Linux o Mac
 
-`.\venv\Scripts\activate`
+`.\.venv\Scripts\activate`
 > Activa el entorno virtual en Windows
 
 `pip list`

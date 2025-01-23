@@ -121,7 +121,7 @@ STATIC_URL = '/static/'
 
 # Directorios donde se almacenan los archivos estáticos (local)
 STATICFILES_DIRS = [
-    BASE_DIR / "proyect/core/static",
+    BASE_DIR / "proyect/core/static/assets",
 ]
 
 STATIC_ROOT = BASE_DIR / "staticfiles"

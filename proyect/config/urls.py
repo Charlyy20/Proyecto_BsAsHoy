@@ -23,3 +23,4 @@ urlpatterns = [
     path("", include("core.urls")),
 #    path('saludo/', views.saludo),
 ]
+

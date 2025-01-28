@@ -11,7 +11,7 @@
     <meta name="keywords" content="">
 
     <!-- Favicons -->
-    <link href="{% static 'core/assets/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'core/assets/img/logo-head.png' %}" rel="icon">
     <link href="{% static 'core/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
     <!-- Fonts -->
@@ -45,9 +45,9 @@
     <header id="header" class="header d-flex align-items-center sticky-top">
       <div class="container position-relative d-flex align-items-center justify-content-between">   
         <a href="{% url 'core:home' %}" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-            <h1 class="sitename">Bs. As. Hoy</h1>
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <img src="{% static 'core/assets/img/logo.png' %}" alt="" class="img-fluid">
         </a>
 
         <nav id="navmenu" class="navmenu">

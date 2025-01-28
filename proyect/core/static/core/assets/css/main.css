@@ -919,8 +919,18 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Culture Category Section
+# CLIENTES Category Section
 --------------------------------------------------------------*/
+
+.banner-img {
+  width: 100%; /* Ocupará el 100% del ancho de la columna */
+  height: auto; /* Mantiene las proporciones originales */
+  max-height: 400px; /* Limita la altura para evitar imágenes demasiado largas */
+  object-fit: cover; /* Recorta si es necesario para encajar bien */
+  border-radius: 10px; /* Agrega bordes redondeados para un mejor diseño */
+}
+
+
 .culture-category .post-entry {
   margin-bottom: 30px;
 }

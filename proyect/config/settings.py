@@ -10,7 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+
+import os
 from pathlib import Path
+from decouple import config
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,7 +43,32 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'storages',
 ]
+
+# Configuración de AWS S3
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')  # Lee la clave desde .env
+AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')  # Lee la clave secreta desde .env
+AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')  # Lee el nombre del bucket desde .env
+AWS_S3_SIGNATURE_NAME = 's3v4'
+AWS_S3_REGION_NAME = config('AWS_S3_REGION_NAME')  # Lee la región desde .env
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL =  'public-read'
+AWS_S3_VERITY = True
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com'
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+
+# Configuración de almacenamiento estático
+STATICFILES_STORAGE = 'core.storage_backends.StaticStorage'  # Reemplaza 'core' con el nombre de tu aplicación
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
+
+# Configuración de almacenamiento multimedia
+DEFAULT_FILE_STORAGE = 'core.storage_backends.MediaStorage'
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

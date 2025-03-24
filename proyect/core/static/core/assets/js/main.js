@@ -1,11 +1,3 @@
-/**
-* Template Name: ZenBlog
-* Template URL: https://bootstrapmade.com/zenblog-bootstrap-blog-template/
-* Updated: Aug 08 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 (function() {
   "use strict";
 
@@ -127,3 +119,27 @@
   window.addEventListener("load", initSwiper);
 
 })();
+
+function mostrarFechaHora() {
+  const fechaHoraElemento = document.getElementById('fecha-hora');
+
+  if (!fechaHoraElemento) return;
+
+  function actualizarFechaHora() {
+    const fecha = new Date();
+    const meses = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+
+    const dia = fecha.getDate();
+    const mes = meses[fecha.getMonth()];
+    const año = fecha.getFullYear();
+    const horas = fecha.getHours().toString().padStart(2, '0');
+    const minutos = fecha.getMinutes().toString().padStart(2, '0');
+
+    fechaHoraElemento.textContent = `${dia} ${mes} ${año} - ${horas}:${minutos}`;
+  }
+
+  actualizarFechaHora();
+  setInterval(actualizarFechaHora, 1000);
+}
+
+document.addEventListener('DOMContentLoaded', mostrarFechaHora);

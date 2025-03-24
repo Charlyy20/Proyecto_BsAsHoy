@@ -42,9 +42,9 @@
   </head>
 
   <body class="index-page"> 
-    <header id="header" class="header d-flex align-items-center sticky-top">
-      <div class="container position-relative d-flex align-items-center justify-content-between">   
-        <a href="{% url 'core:home' %}" class="logo d-flex align-items-center me-auto me-xl-0">
+    <header id="header" class="d-flex align-items-center header sticky-top">
+      <div class="container d-flex align-items-center justify-content-between position-relative">   
+        <a href="{% url 'core:home' %}" class="d-flex align-items-center logo me-auto me-xl-0">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.png" alt=""> -->
           <img src="{% static 'core/assets/img/logo.png' %}" alt="" class="img-fluid">
@@ -74,7 +74,7 @@
             </li>
             <li><a href="{% url 'core:contact' %}">Contacto</a></li>
           </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          <i class="d-xl-none bi bi-list mobile-nav-toggle"></i>
         </nav>
       
         <div class="header-social-links">
@@ -92,7 +92,7 @@
     </div>
     
 
-    <footer id="footer" class="footer dark-background">
+    <footer id="footer" class="dark-background footer">
       <div class="container footer-top">
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
@@ -155,7 +155,7 @@
           </div>
         </div>
       
-      <div class="container copyright text-center mt-4">
+      <div class="container text-center copyright mt-4">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">Bs. As. Hoy</strong> <span>All Rights Reserved</span></p>
       </div>
       
@@ -166,7 +166,7 @@
     </script>
 
     <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" id="scroll-top" class="d-flex align-items-center justify-content-center scroll-top"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Preloader -->
     <div id="preloader"></div>

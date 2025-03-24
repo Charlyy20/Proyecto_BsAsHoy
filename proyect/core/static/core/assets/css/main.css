@@ -154,8 +154,9 @@ h6 {
   color: var(--heading-color);
 }
 
-.header .header-social-links {
-  padding-right: 15px;
+.header .social-links {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .header .header-social-links a {

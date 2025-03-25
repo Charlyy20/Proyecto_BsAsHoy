@@ -128,7 +128,6 @@ function mostrarFechaHora() {
   function actualizarFechaHora() {
     const fecha = new Date();
     const meses = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
-
     const dia = fecha.getDate();
     const mes = meses[fecha.getMonth()];
     const año = fecha.getFullYear();

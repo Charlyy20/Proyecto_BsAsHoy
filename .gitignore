@@ -2,3 +2,4 @@
 !**/migrations/__init__.py
 **/migrations/*.py
 __pycache__
+.env

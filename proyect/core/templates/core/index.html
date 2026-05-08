@@ -87,75 +87,31 @@
       <!-- Fin Clientes Titulo Seccion -->
 
       <!-- Clientes Banners Seccion -->
+      
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <!-- Primer fila de clientes -->
-        <div class="row mb-5">
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 p-2 mt-2 ml-2 mr-2">
-            <img src="{%static 'core/assets/img/image1.png'%}" alt="" class="img-fluid">
-          </div>
+        {% for fila in banners_filas %}
+          <div class="row mb-5">
 
-          <div class="col-lg-3 col-md-4 col-sm-6 p-2 mt-2 ml-2 mr-2">
-            <img src="{%static 'core/assets/img/image2.jpg'%}" alt="" class="img-fluid">
-          </div>
+            {% for banner in fila %}
+              <div class="col-lg-3 col-md-4 col-sm-6 p-2 mt-2 ml-2 mr-2">
+                <img 
+                  src="{{ banner.url }}" 
+                  alt="{{ banner.titulo }}" 
+                  class="img-fluid"
+                >
+              </div>
+            {% endfor %}
 
-          <div class="col-lg-3 col-md-4 col-sm-6 p-2 mt-2 ml-2 mr-2">
-            <img src="{%static 'core/assets/img/image3.jpg'%}" alt="" class="img-fluid">
           </div>
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 p-2 mt-2 ml-2 mr-2">
-            <img src="{%static 'core/assets/img/image4.jpg'%}" alt="" class="img-fluid">
-          </div>
+        {% endfor %}
 
-        </div>
-        <!-- Fin primer fila de clientes -->
-        <!-- Segunda fila de clientes -->
-        <div class="row mb-5">
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 p-2 mt-2 ml-2 mr-2">
-            <img src="{%static 'core/assets/img/image5.jpg'%}" alt="" class="img-fluid">
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6 p-2 mt-2 ml-2 mr-2">
-            <img src="{%static 'core/assets/img/image6.jpg'%}" alt="" class="img-fluid">
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6 p-2 mt-2 ml-2 mr-2">
-            <img src="{%static 'core/assets/img/image7.png'%}" alt="" class="img-fluid">
-          </div>
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 p-2 mt-2 ml-2 mr-2">
-            <img src="{%static 'core/assets/img/image8.jpg'%}" alt="" class="img-fluid">
-          </div>
-
-        </div>
-        <!-- Fin segunda fila de clientes -->
-        <!-- Tercer fila de clientes -->
-        <div class="row mb-5">
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 p-2 mt-2 ml-2 mr-2">
-            <img src="{%static 'core/assets/img/image9.png'%}" alt="" class="img-fluid">
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6 p-2 mt-2 ml-2 mr-2">
-            <img src="{%static 'core/assets/img/image10.jpg'%}" alt="" class="img-fluid">
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6 p-2 mt-2 ml-2 mr-2">
-            <img src="{%static 'core/assets/img/image11.png'%}" alt="" class="img-fluid">
-          </div>
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 p-2 mt-2 ml-2 mr-2">
-            <img src="{%static 'core/assets/img/image12.jpg'%}" alt="" class="img-fluid">
-          </div>
-
-        </div>
-        <!-- Fin tercer fila de clientes -->
       </div>
-      
+      <!-- Fin Clientes Banners Seccion -->
+       
     </section>
-    <!-- Fin Clientes Banners Seccion -->
+    <!-- Fin Clientes Categoria Seccion -->
+    
     
     <!-- Trending Section -->
     <section id="trending-category" class="trending-category section">

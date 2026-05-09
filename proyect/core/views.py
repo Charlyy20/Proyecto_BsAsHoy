@@ -60,8 +60,11 @@ def home(request):
         banners_home[8:12],
     ]
 
+    videos_externos = models.VideoExterno.objects.filter(activo=True)[:3]
+
     return render(request, "core/index.html", {
         "banners_filas": banners_filas,
+        "videos_externos": videos_externos,
     })
 
 
